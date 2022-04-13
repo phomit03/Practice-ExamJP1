@@ -1,24 +1,21 @@
 package testjp1;
 
+import java.util.Scanner;
+
 public class ComplexDemo {
 
     public static void main(String[] args) {
-        Complex c = new Complex();
-        Complex n1 = new Complex(2.5, 3.7),
-                n2 = new Complex(3.8, 9.6),
-                temp;
+        Complex n1 = new Complex(2.6, 5.2),
+                n2 = new Complex(6.2, 4.8),
+                add = n1.add(n2),
+                subtract = n1.subtract(n2),
+                multiply = n1.multiply(n2),
+                divide = n1.divide(n2);
 
-        temp = c.add(n1, n2);
-        temp = c.subtract(n1, n2);
-        temp = c.multiply(n1, n2);
-        temp = c.divide(n1, n2);
-
-        System.out.println("Complex number: " + c.realPart + " + " + c.imaginaryPart + "i");
-
-        System.out.printf("Sum = %.1f + %.1fi\n", n1.add(n1,n2));
-        System.out.printf("Subtract = %.1f + %.1fi\n", temp.realPart, temp.imaginaryPart);
-        System.out.printf("Multiply = %.1f + %.1fi\n", temp.realPart, temp.imaginaryPart);
-        System.out.printf("Divide = %.1f + %.1fi\n", temp.realPart, temp.imaginaryPart);
-
+        System.out.println("Sum = " + add.toString());
+        System.out.println("Subtract = " + subtract.toString());
+        System.out.println("Multiply = " + multiply.toString());
+        System.out.println("Divide = " + divide.toString());
     }
+
 }
